@@ -1,0 +1,79 @@
+#!/bin/bash
+
+OLDPWD=$PWD
+
+for FILE; do
+
+	FILEPATH=$(readlink -f "$FILE")
+	FILENAME="${FILE%%.*}"
+
+	case "$FILE" in
+	*.tar.bz2 | *.tbz2)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		tar xjf "$FILEPATH"
+		;;
+	*.tar.gz | *.tgz)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		tar xzf "$FILEPATH"
+		;;
+	*.bz | *.bz2)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		bzip2 -ckdq "$FILEPATH" >.
+		;;
+	*.rar)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		unrar x "$FILEPATH" -idq .
+		;;
+	*.gz | *.Z)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		gunzip -cqq "$FILEPATH" >.
+		;;
+	*.tar)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		tar xf "$FILEPATH"
+		;;
+	*.zip | *.war)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		unzip -qq "$FILEPATH" -d .
+		;;
+	*.7z)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		7z x "$FILEPATH" -y -o . >/dev/null
+		;;
+	*.tar.xz | *.tar.lzma)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		tar xJf "$FILEPATH"
+		;;
+	*.deb)
+		OUTPUT="$PWD/$FILENAME"
+		mkdir "$OUTPUT"
+		cd "$OUTPUT"
+		ar x "$FILEPATH"
+		;;
+	*.xz)
+		unxz -q "$FILEPATH"
+		;;
+	esac
+
+	cd "$OLDPWD"
+done
+
+exit 0

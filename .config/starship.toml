@@ -1,0 +1,122 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """$username$hostname: $directory$fill$all"""
+
+command_timeout = 2400
+
+[fill]
+symbol = "."
+style = "#7c6f64"
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]
+success_symbol = "[➜](bold #689d6a)"
+error_symbol = "[✗](bold #cc241d) "
+
+[username]
+format = '[$user](bold #a89984)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$ssh_symbol](bold #689d6a)[@](bold #b16286)[$hostname](bold #a89984)"
+trim_at = ".zalando.net"
+disabled = false
+
+[directory]
+truncation_length = 0
+truncation_symbol = "…/"
+read_only = " "
+truncate_to_repo = false
+read_only_style = "#cc241d"
+style = "#458588"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[aws]
+symbol = "  "
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+
+[c]
+symbol = " "
+format = '\[[$symbol($version(-$name))]($style)\]'
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]'
+
+[cmd_duration]
+style = "bold #A3BE8C"
+format = '([\[⏱ $duration\]]($style))'
+
+[docker_context]
+symbol = " "
+format = '\[[$symbol$context]($style)\]'
+
+[gcloud]
+format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
+
+[git_branch]
+style = "bold #b16286"
+symbol = " "
+format = '([\[$symbol$branch\]]($style))'
+
+[git_metrics]
+disabled = false
+deleted_style = "bold #cc241d"
+added_style = "bold #689d6a"
+format = '[\[+$added]($added_style)/[-$deleted\]]($deleted_style)'
+
+[git_status]
+style = "bold #fabd2f"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[golang]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[java]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[kotlin]
+format = '\[[$symbol($version)]($style)\]'
+
+[kubernetes]
+format = '\[[$symbol$context( \($namespace\))]($style)\]'
+
+[lua]
+format = '\[[$symbol($version)]($style)\]'
+
+[memory_usage]
+symbol = " "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[nodejs]
+disabled = true
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[package]
+style = "bold #b8bb26"
+symbol = " "
+format = '([\[$symbol$version\]]($style))'
+
+[python]
+symbol = " "
+style = "bold #83a598"
+format = '([\[$symbol$pyenv_prefix$version(\($virtualenv\))\]]($style))'
+
+[sudo]
+format = '\[[as $symbol]\]'
+
+[vagrant]
+format = '\[[$symbol($version)]($style)\]'

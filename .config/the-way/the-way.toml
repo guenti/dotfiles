@@ -1,0 +1,4 @@
+theme = 'InspiredGitHub'
+db_dir = '/home/maguenterber/.local/share/the-way/the_way_db'
+themes_dir = '/home/maguenterber/.local/share/the-way/themes'
+copy_cmd = 'xclip -in -selection clipboard'
