@@ -4,11 +4,10 @@ return {
 	opts = {
 		---@type lspconfig.options
 		servers = {
-			-- These will be automatically installed with mason and loaded with lspconfig
+			-- pyright will be automatically installed with mason and loaded with lspconfig
 			pyright = {},
 			salt_ls = {},
 			clangd = {},
-			jdtls = {},
 		},
 	},
 }

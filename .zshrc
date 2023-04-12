@@ -126,12 +126,12 @@ alias csf=cmdfind
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --color=always --hidden --exclude .git'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 export FZF_COMPLETION_TRIGGER='~~'
-# Gruvbox Material colors
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284
-  --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf
-  --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
-  --color=gutter:-1'
+# catppuccin colors for fzf
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
+  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
+  --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+  --color=gutter:-1"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

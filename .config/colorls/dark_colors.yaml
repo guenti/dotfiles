@@ -1,44 +1,44 @@
-# Main Colors
-unrecognized_file: '#ebdbb2'
-recognized_file: '#398971a'
-dir: '#458588'
+# Main Colors (catppuccin mocha flavour)
+unrecognized_file: '#eba0ac' # maroon
+recognized_file: '#fab387' # peach
+dir: '#89b4fa' # blue
 
 # Link
-dead_link: '#cc241d'
-link: '#b16286'
+dead_link: '#9399b2' # overlay2
+link: '#94e2d5' # teal
 
 # Special files
-socket: '#d65d0e'
-blockdev: '#689d6a'
-chardev: '#fe8019'
+socket: '#f5c2e7' # pink
+blockdev: '#f5c2e7' # pink
+chardev: '#f5c2e7' # pink
 
 # Access Modes
-write: '#d79921'
-read: '#cc241d'
-exec: '#98971a'
-no_access: '#928374'
+write: '#94e2d5' # teal
+read: '#f2cdcd' # flamingo
+exec: '#f38ba8' # red
+no_access: '#a6adc8' # subtext0
 
 # Age
-day_old: '#bdae93'
-hour_old: '#fbf1c7'
-no_modifier: '#7c6f64'
+day_old: '#cdd6f4' # text
+hour_old: '#bac2de' # subtext1
+no_modifier: '#a6adc8' # subtext0
 
 # File Size
-file_large: '#d5c4a1'
-file_medium: '#928374'
-file_small: '#7c6f64'
+file_large: '#89b4fa' # blue
+file_medium: '#74c7ec' # sapphire
+file_small: '#89dceb' # sky
 
 # Random
-report: '#ebdbb2'
-user: '#83a598'
-tree: '#d5c4a1'
-empty: '#d79921'
-error: '#fb4934'
-normal: '#a89984'
+report: '#bac2de' # subtext1
+user: '#cdd6f4' # text
+tree: '#cba6f7' # mauve
+empty: '#f5e0dc' # rosewater
+error: '#eba0ac' # maroon
+normal: '#cdd6f4' # text
 
 # Git
-addition: '#8ec07c'
-modification: '#fabd2f'
-deletion: '#d3869b'
-untracked: '#a89984'
-unchanged: '#ebdbb2'
+addition: '#a6e3a1' # green
+modification: '#94e2d5' # teal
+deletion: '#eba0ac' # maroon
+untracked: '#f9e2af' # yellow
+unchanged: '#cdd6f4' # text
