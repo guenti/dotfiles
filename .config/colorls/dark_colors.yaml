@@ -1,5 +1,5 @@
 # Main Colors (catppuccin mocha flavour)
-unrecognized_file: '#eba0ac' # maroon
+unrecognized_file: '#cdd6f4' # text
 recognized_file: '#fab387' # peach
 dir: '#89b4fa' # blue
 
@@ -19,8 +19,8 @@ exec: '#f38ba8' # red
 no_access: '#a6adc8' # subtext0
 
 # Age
-day_old: '#cdd6f4' # text
-hour_old: '#bac2de' # subtext1
+day_old: '#89b4fa' # blue
+hour_old: '#89dceb' # sky
 no_modifier: '#a6adc8' # subtext0
 
 # File Size
