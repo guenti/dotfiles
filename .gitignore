@@ -1,2 +1,3 @@
 .local/share/icons
 .vifm/vifminfo.json
+.config/lazygit/state.yml
