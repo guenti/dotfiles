@@ -80,7 +80,10 @@ export DEBEMAIL DEBFULLNAME
 # Tmux stuff
 export TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins"
 
+# man pages
 export MANPATH="/usr/local/man:$MANPATH"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANROFFOPT="-c"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
