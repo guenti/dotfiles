@@ -9,7 +9,8 @@ return {
 				theme = "catppuccin",
 				disabled_filetypes = { statusline = { "dashboard", "lazy", "alpha", "neo-tree" } },
 				component_separators = "",
-				section_separators = { left = " ", right = " " },
+				--section_separators = { left = " ", right = " " },
+				section_separators = { left = "", right = "" },
 				globalstatus = true,
 			},
 			sections = {

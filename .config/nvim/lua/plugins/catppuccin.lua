@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			flavour = "frappe",
+			flavour = "mocha",
 			transparent_background = true,
 			styles = {
 				comments = { "italic" },
@@ -28,6 +28,7 @@ return {
 				notify = true,
 				bufferline = true,
 				mason = true,
+				which_key = true,
 			},
 		},
 	},

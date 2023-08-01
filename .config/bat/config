@@ -1,5 +1,5 @@
---theme="Catppuccin-frappe"
+--theme="Catppuccin-mocha"
 --italic-text=always
 --wrap never
 --terminal-width +50
---style="numbers,changes,header"
+--style="changes,header,numbers,rule,header-filename,header-filesize"

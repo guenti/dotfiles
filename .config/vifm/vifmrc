@@ -1,0 +1,84 @@
+" Defaults
+set title
+set vicmd=nvim
+set dotfiles
+
+" Searching
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+
+" Set Trash
+set trash
+set trashdir="~/.local/share/Trash/files"
+
+" Remove confirmation for deletion into trash only (dd key combination)
+set confirm-=delete
+
+" Automatically resolve symbolic links on l or Enter.
+set followlinks
+
+" Maximum number of changes that can be undone.
+set undolevels=1000
+
+" Use KiB, MiB, ... instead of KB, MB, ...
+set noiec
+
+" Format for displaying time in file list.
+set timefmt=%Y-%m-%d\ %H:%M
+
+" Show list of matches on tab completion in command-line mode
+set wildmenu
+
+" Display completions in a form of popup with descriptions of the matches
+set wildstyle=popup
+
+" Set custom status line look
+set statusline="%1*%* %2*%t%=%T%* %3*%* %2*%d%* %3*%* %2*%A%* %3*%* %2*%u %3*%* %2*%a free%* %3*%*"
+
+" Source filetype icons
+source ~/.vifm/icons.vifm
+
+" Colorscheme
+colorscheme catppuccin
+
+" My standard two-panel file managers mappings
+nnoremap <f3> :view<cr>
+nnoremap <f4> :edit<cr>
+nnoremap <f5> :copy<cr>
+nnoremap <f6> :move<cr>
+nnoremap <f7> :mkdir<space>
+nnoremap <f8> :delete<cr>
+nnoremap <f10> :quit<cr>
+
+:filetype *.ssh FUSE_MOUNT2|sshfs %FOREGROUND %PARAM %DESTINATION_DIR
+
+" Custom commands
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" create symlink from one side to the other side in split view
+command link ln -s %f:p %D
+" extract archives
+command! extract extract %f %n
+nnoremap <F2> :extract<cr>
+
+" Filetypes, previews and associated programs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype *.jpg,*.jpeg,*.png,*.gif feh %f 2>/dev/null &
+filetype *.md5 md5sum -c %f
+filetype *.pdf zathura %f 2>/dev/null &
+
+" browse images in the current directory
+filextype *.jpg,*.jpeg,*.png,*.gif
+       \ {View in feh}
+       \ feh -FZ %d --start-at %d/%c 2>/dev/null
+
+fileviewer *.tar,*.tar.gz,*.tar.bz tar -tvf %c
+fileviewer *.zip unzip -l %c
+fileviewer *.html,*.htm lynx %c
+fileviewer *.pdf pdftotext %c -
+fileviewer *.odt unoconv %c
+fileviewer */ tree %c
+fileviewer *.py,*.rb,*.c,*.cpp,*.h,*.yml,*.yaml,*.json,*.md,*.lua,*.rs highlight -O truecolor -l -s freya %c
+fileviewer *.sls,*.toml highlight -S yaml -O truecolor -l -s freya %c
+fileviewer * highlight --force -O truecolor %c

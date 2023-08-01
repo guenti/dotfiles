@@ -7,3 +7,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule ".config/nvim/my-snippets/flask-snippets"]
+	path = .config/nvim/my-snippets/flask-snippets
+	url = https://github.com/guenti/vscode-flask-snippets.git

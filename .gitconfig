@@ -1,31 +1,31 @@
 [alias]
-    co = checkout
-    ci = !git add --all && git commit -S -a -v -s
-    lg = log --graph --date-order -C -M --pretty=format:'%Cred%h%Creset %C(yellow)%ad%Creset %Cgreen[%an]%Creset%C(magenta)%d%Creset %s' --all --date='format:%c'
-    ll = log --graph --pretty=format:'%Cred%h%Creset%C(magenta)%d%Creset %s' --all
-    cl = log --pretty='- %s'
-    st = status -s
-    d = difftool
-    nb = checkout -b
-    rb = branch -d
-    punch = push --force
-    sig = log --show-signature
+  co = checkout
+  ci = !git add --all && git commit -S -a -v -s
+  lg = log --graph --date-order -C -M --pretty=format:'%Cred%h%Creset %C(yellow)%ad%Creset %Cgreen[%an]%Creset%C(magenta)%d%Creset %s' --all --date='format:%c'
+  ll = log --graph --pretty=format:'%Cred%h%Creset%C(magenta)%d%Creset %s' --all
+  cl = log --pretty='- %s'
+  st = status -s
+  d = difftool
+  nb = checkout -b
+  rb = branch -d
+  punch = push --force
+  sig = log --show-signature
 [core]
-    editor = nvim
-    autocrlf = input
-    savecrlf = true
-    excludesfile = ~/.gitignore_global
-    pager = delta
+  editor = nvim
+  autocrlf = input
+  savecrlf = true
+  excludesfile = ~/.gitignore_global
+  pager = delta
 [user]
-    name = Mario Guenterberg
-    email = mario.guenterberg@googlemail.com
-    signingkey = 899FEEA3
+  name = Mario Guenterberg
+  email = mario.guenterberg@googlemail.com
+  signingkey = 899FEEA3
 [color]
-    ui = auto
+  ui = auto
 [push]
-    default = simple
+  default = simple
 [commit]
-    template = ~/.gitmessage
+  template = ~/.gitmessage
 	gpgsign = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -33,32 +33,36 @@
 	process = git-lfs filter-process
 	required = true
 [web]
-    browser = open
+  browser = open
 [pull]
 	rebase = false
 [init]
 	defaultBranch = main
 [diff]
-    tool = vimdiff3
-    colorMoved = default
+  tool = vimdiff3
+  colorMoved = default
 [difftool "vimdiff3"]
 	path = nvim
 [merge]
-    tool = vimdiff3
-    conflictstyle = diff3
+  tool = vimdiff3
+  conflictstyle = diff3
 [mergetool "vimdiff3"]
-    path = nvim
+  path = nvim
 [interactive]
-    diffFilter = delta --color-only  --features=interactive
+  diffFilter = delta --color-only  --features=interactive
 [delta]
-    navigate = true
-    features = decorations
-    side-by-side = true
-    line-numbers = true
-    syntax-theme = gruvbox-dark
+  navigate = true
+  features = decorations
+  side-by-side = true
+  line-numbers = true
+  syntax-theme = gruvbox-dark
 [delta "interactive"]
-    keep-plus-minus-markers = true
+  keep-plus-minus-markers = true
 [delta "decorations"]
-    commit-style = raw
-    file-style = omit
-    hunk-header-style = file line-number syntax
+  commit-style = raw
+  file-style = omit
+  hunk-header-style = file line-number syntax
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential

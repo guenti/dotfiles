@@ -1,4 +1,4 @@
-theme = 'base16-ocean.dark'
+theme = 'Nord'
 db_dir = '/home/guenti/.local/share/the-way/the_way_db'
 themes_dir = '/home/guenti/.local/share/the-way/themes'
 copy_cmd = 'xclip -in -selection clipboard'
