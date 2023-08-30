@@ -36,7 +36,7 @@ for FILE; do
 		OUTPUT="$PWD/$FILENAME"
 		mkdir "$OUTPUT"
 		cd "$OUTPUT"
-		gunzip -cqq "$FILEPATH" >.
+		gunzip "$FILEPATH" >.
 		;;
 	*.tar)
 		OUTPUT="$PWD/$FILENAME"
