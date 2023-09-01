@@ -79,6 +79,6 @@ fileviewer *.html,*.htm lynx %c
 fileviewer *.pdf pdftotext %c -
 fileviewer *.odt unoconv %c
 fileviewer */ tree %c
-fileviewer *.py,*.rb,*.c,*.cpp,*.h,*.yml,*.yaml,*.json,*.md,*.lua,*.rs highlight -O truecolor -l -s freya %c
-fileviewer *.sls,*.toml highlight -S yaml -O truecolor -l -s freya %c
+fileviewer *.py,*.rb,*.c,*.cpp,*.h,*.yml,*.yaml,*.json,*.md,*.lua,*.rs highlight -O truecolor -l -s bipolar %c
+fileviewer *.sls,*.toml highlight -S yaml -O truecolor -l -s bipolar %c
 fileviewer * highlight --force -O truecolor %c
