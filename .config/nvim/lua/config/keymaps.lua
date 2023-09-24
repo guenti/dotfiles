@@ -13,21 +13,24 @@ keymap("n", "<F1>", "<ESC>", opts)
 keymap("v", "<F1>", "<ESC>", opts)
 
 -- Diable arrow keys in normal mode
-keymap("n", "<Up>", "<NOP>", opts)
-keymap("n", "<Down>", "<NOP>", opts)
-keymap("n", "<Left>", "<NOP>", opts)
-keymap("n", "<Right>", "<NOP>", opts)
+keymap("n", "<Up>", "<nop>", opts)
+keymap("n", "<Down>", "<nop>", opts)
+keymap("n", "<Left>", "<nop>", opts)
+keymap("n", "<Right>", "<nop>", opts)
 
 -- Open files
-keymap("n", "<Leader>we", ':e <C-r>=fnamemodify(nvim_buf_get_name(0), ":p:h") . "/"<CR>', { silent = false })
+keymap("n", "<Leader>oo", ':e <C-r>=fnamemodify(nvim_buf_get_name(0), ":p:h") . "/"<CR>', { silent = false })
 -- Open files split
-keymap("n", "<Leader>se", ':sp <C-r>=fnamemodify(nvim_buf_get_name(0), ":p:h") . "/"<CR>', { silent = false })
+keymap("n", "<Leader>os", ':sp <C-r>=fnamemodify(nvim_buf_get_name(0), ":p:h") . "/"<CR>', { silent = false })
 -- Open files split verticaly
-keymap("n", "<Leader>ve", ':vsp <C-r>=fnamemodify(nvim_buf_get_name(0), ":p:h") . "/"<CR>', { silent = false })
+keymap("n", "<Leader>ov", ':vsp <C-r>=fnamemodify(nvim_buf_get_name(0), ":p:h") . "/"<CR>', { silent = false })
 
 -- Open an new (empty) split window and switch over to it.
 keymap("n", "<Leader>nv", ":botright vnew<CR><C-w>l", opts)
 keymap("n", "<Leader>nu", ":below new<CR><C-w>l", opts)
+
+-- Toggle non-visible character display
+keymap("n", "<Leader>n", ":set list!<CR>", opts)
 
 -- Clear search result in normal mode
 keymap("n", "<Leader><Space>", ":noh<CR>", opts)
@@ -43,7 +46,7 @@ keymap("n", "<Leader>ab", ":enew<CR>", opts)
 keymap("n", "<Leader>nb", ":bnext<CR>", opts)
 keymap("n", "<Leader>pb", ":bprevious<CR>", opts)
 keymap("n", "<Leader>kb", ":bp <BAR> bd #<CR>", opts)
-keymap("n", "<Leader>bl", ":ls<CR>", opts)
+keymap("n", "<Leader>lb", ":ls<CR>", opts)
 
 -- Tabs
 keymap("n", "<Leader>at", ":tabnew<CR>", opts)
@@ -54,3 +57,7 @@ keymap("n", "<Leader>kt", ":tabclose<CR>", opts)
 -- Insert
 -- Mapping ESC to jj
 keymap("i", "jj", "<ESC>", opts)
+
+-- Pomodoro
+keymap("n", "<leader>ps", "<cmd>PomodoroStart<cr>", opts)
+keymap("n", "<leader>pk", "<cmd>PomodoroStop<cr>", opts)

@@ -8,12 +8,13 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
+# import:
 #  - /path/to/alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
+---
 env:
   WINIT_X11_SCALE_FACTOR: '1.0'
   # TERM variable
@@ -22,7 +23,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: xterm-256color
+  # TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -52,7 +53,7 @@ window:
     y: 4
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  # dynamic_padding: false
 
   # Window decorations
   #
@@ -66,7 +67,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.9
+  opacity: 0.95
 
   # Startup Mode (changes require restart)
   #
@@ -77,7 +78,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  # startup_mode: Windowed
 
   # Window title
   title: Alacritty
@@ -150,16 +151,15 @@ font:
     x: 0
     y: 0
 
-  # Use built-in font for box drawing characters.
-  #
-  # If `true`, Alacritty will use a custom built-in font for box drawing
-  # characters (Unicode points 2500 - 259f).
-  #
-  #builtin_box_drawing: true
+    # Use built-in font for box drawing characters.
+    # If `true`, Alacritty will use a custom built-in font for box drawing
+    # characters (Unicode points 2500 - 259f).
+    #
+    # builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors catppuccin
+# Colors
 import:
-  - ~/.config/alacritty/themes/catppuccin-mocha.yml
+  - ~/.config/alacritty/themes/gruvbox.yml

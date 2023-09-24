@@ -1,16 +1,16 @@
-# Main Colors (catppuccin mocha flavour)
-unrecognized_file: '#cdd6f4' # text
-recognized_file: '#fab387' # peach
-dir: '#89b4fa' # blue
+# Main Colors (gruvbox flavour)
+unrecognized_file: '#ebdbb2' # fg
+recognized_file: '#98971a' # green
+dir: '#458588' # blue
 
 # Link
-dead_link: '#9399b2' # overlay2
-link: '#94e2d5' # teal
+dead_link: '#fb4934' # red (light)
+link: '#b16286' # purple
 
 # Special files
-socket: '#f5c2e7' # pink
-blockdev: '#f5c2e7' # pink
-chardev: '#f5c2e7' # pink
+socket: '#d79921' # yellow
+blockdev: '#d79921' # yellow
+chardev: '#d79921' # yellow
 
 # Access Modes
 write: '#94e2d5' # teal

@@ -41,7 +41,8 @@ set statusline="%1*%* %2*%t%=%T%* %3*%* %2*%d%* %3*%* %2*%A%* %3*%* 
 source ~/.vifm/icons.vifm
 
 " Colorscheme
-colorscheme catppuccin
+" colorscheme catppuccin
+colorscheme gruvbox
 
 " My standard two-panel file managers mappings
 nnoremap <f3> :view<cr>

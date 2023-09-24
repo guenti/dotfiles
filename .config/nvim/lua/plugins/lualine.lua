@@ -6,7 +6,7 @@ return {
 	opts = function()
 		return {
 			options = {
-				theme = "catppuccin",
+				theme = "gruvbox",
 				disabled_filetypes = { statusline = { "dashboard", "lazy", "alpha", "neo-tree" } },
 				component_separators = "",
 				--section_separators = { left = " ", right = " " },
@@ -51,6 +51,7 @@ return {
 							mac = "",
 						},
 					},
+					require("pomodoro").statusline,
 				},
 				lualine_y = { "encoding", "filetype" },
 				lualine_z = { "%l:%c", "%p%%/%L" },
