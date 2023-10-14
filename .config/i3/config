@@ -201,11 +201,11 @@ exec_always --no-startup-id feh --bg-fill $HOME/.local/share/backgrounds/gruvbox
 # Transparency with picom
 exec_always --no-startup-id picom
 
-# Config borders and gaps
+# Config borders and gapse
 #for_window [class="^.*"] border pixel 2
 default_border pixel 0
 gaps outer 0
-gaps inner 2
+gaps inner 5
 
 # Tap on touchpad
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
@@ -216,6 +216,15 @@ for_window [class="Code"] move to workspace $ws2; workspace $ws2
 for_window [class="Google-chrome"] move to workspace $ws3; workspace $ws3
 for_window [class="Spotify"] move to workspace $ws4; workspace $ws4
 for_window [class="TelegramDesktop"] move to workspace $ws5; workspace $ws5
+for_window [class="discord"] move to workspace $ws5; workspace $ws5
 
 # Floating windows
 for_window [class="gnome-calculator"] floating enable
+
+# Window decoration
+# class                 border  backgr. text    indicator child_border
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4   $fg
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   $aqua
+#client.unfocused        #333333 #222222 #888888 #292d2e   $bg
+#client.urgent           #2f343a #900000 #ffffff #900000   $red
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   $darkgray

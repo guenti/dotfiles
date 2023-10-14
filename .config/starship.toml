@@ -10,21 +10,21 @@ command_timeout = 2400
 
 [fill]
 symbol = "."
-style = "subtext0"
+style = "#928374"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]
-success_symbol = "[➜](bold #a6e3a1)"
-error_symbol = "[✗](bold #f38ba8) "
+success_symbol = "[➜](bold #689d6a)"
+error_symbol = "[✗](bold #cc241d)"
 
 [username]
-format = '[$user](bold #b4befe)'
+format = '[$user](bold #ebdbb2)'
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = "[$ssh_symbol](bold #b4befe)[@](bold #cdd6f4)[$hostname](bold #b4befe)"
+format = "[$ssh_symbol](bold #d65d0e)[@](bold #a89984)[$hostname](bold #ebdbb2)"
 trim_at = ".zalando.net"
 disabled = false
 
@@ -33,8 +33,8 @@ truncation_length = 0
 truncation_symbol = "…/"
 read_only = " "
 truncate_to_repo = false
-read_only_style = "#eba0ac"
-style = "#89b4fa"
+read_only_style = "#fb4934"
+style = "#d79921"
 
 [directory.substitutions]
 "Documents" = " "
@@ -43,7 +43,7 @@ style = "#89b4fa"
 "Pictures" = " "
 
 [aws]
-symbol = "  "
+symbol = "󰸏  "
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [c]
@@ -54,29 +54,30 @@ format = '\[[$symbol($version(-$name))]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
-style = "bold #94e2d5"
-format = '([\[⏱ $duration\]]($style))'
+style = "bold #98971a"
+format = '([\[󱑆 $duration\]]($style))'
 
 [docker_context]
 symbol = " "
 format = '\[[$symbol$context]($style)\]'
 
 [gcloud]
+symbol = "󱇶 "
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
 [git_branch]
-style = "bold #cba6f7"
+#style = "bold #cba6f7"
 symbol = " "
 format = '([\[$symbol$branch\]]($style))'
 
 [git_metrics]
 disabled = false
-deleted_style = "bold #fab387"
-added_style = "bold #a6e3a1"
+#deleted_style = "bold #fab387"
+#added_style = "bold #a6e3a1"
 format = '[\[+$added]($added_style)/[-$deleted\]]($deleted_style)'
 
 [git_status]
-style = "bold #f5c2e7"
+#style = "bold #f5c2e7"
 format = '([\[$all_status$ahead_behind\]]($style))'
 
 [golang]
@@ -88,12 +89,15 @@ symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [kotlin]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [kubernetes]
+symbol = "󱃾 "
 format = '\[[$symbol$context( \($namespace\))]($style)\]'
 
 [lua]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
@@ -106,13 +110,13 @@ symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [package]
-style = "bold #89dceb"
+#style = "bold #89dceb"
 symbol = " "
 format = '([\[$symbol$version\]]($style))'
 
 [python]
 symbol = " "
-style = "bold #f9e2af"
+#style = "bold #f9e2af"
 format = '([\[$symbol$pyenv_prefix$version(\($virtualenv\))\]]($style))'
 
 [sudo]

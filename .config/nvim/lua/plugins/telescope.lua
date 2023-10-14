@@ -15,7 +15,7 @@ return {
 				{
 					"<Leader>fg",
 					"<cmd>Telescope live_grep<cr>",
-					desc = "Find Files",
+					desc = "Find in Files with grep",
 				},
 				-- find open buffers
 				{

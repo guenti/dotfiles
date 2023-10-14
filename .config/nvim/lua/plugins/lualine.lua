@@ -9,8 +9,7 @@ return {
 				theme = "gruvbox",
 				disabled_filetypes = { statusline = { "dashboard", "lazy", "alpha", "neo-tree" } },
 				component_separators = "",
-				--section_separators = { left = " ", right = " " },
-				section_separators = { left = "", right = "" },
+				section_separators = { right = "", left = "" },
 				globalstatus = true,
 			},
 			sections = {
@@ -20,7 +19,30 @@ return {
 						"branch",
 						icon = "",
 					},
-					"diff",
+					{
+						"diff",
+						symbols = {
+							added = " ",
+							modified = " ",
+							removed = " ",
+						},
+					},
+				},
+				lualine_c = {
+					"encoding",
+					{ "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+					{
+						"filename",
+						path = 1,
+						symbols = {
+							modified = " ",
+							readonly = " ",
+							new = " ",
+							unnamed = " ",
+						},
+					},
+				},
+				lualine_x = {
 					{
 						"diagnostics",
 						symbols = {
@@ -30,30 +52,18 @@ return {
 							hint = icons.diagnostics.Hint,
 						},
 					},
-				},
-				lualine_c = {
-					{
-						"filename",
-						path = 0,
-						symbols = {
-							modified = "  ",
-							readonly = "  ",
-							unnamed = "",
-						},
-					},
-				},
-				lualine_x = {
 					{
 						"fileformat",
 						symbols = {
-							unix = "",
-							dos = "",
-							mac = "",
+							unix = " ",
+							dos = " ",
+							mac = " ",
 						},
 					},
+				},
+				lualine_y = {
 					require("pomodoro").statusline,
 				},
-				lualine_y = { "encoding", "filetype" },
 				lualine_z = { "%l:%c", "%p%%/%L" },
 			},
 			inactive_sections = {
